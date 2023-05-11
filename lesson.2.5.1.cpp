@@ -1,18 +1,34 @@
 #include<iostream>
 using namespace std;
 
-int main(){
-    int vvod, last;
-    last = 0;
+int main()
+{
+    int vvod, stepen, dupl;
     cin >> vvod;
-    while (vvod != 0)
+    dupl = vvod;
+    stepen = 0;
+
+    while (dupl > 0)
     {
         /* code */
-
-        last +=vvod % 10;
-        vvod /= 10;
+        stepen ++;
+        dupl /= 10;
     }
-    cout << last;
+    stepen --;
+
+    int temp, zapomnim, perem;
+    dupl = vvod;
+    perem = vvod;
+    zapomnim = 0;
+    for (int i = 0; i <= stepen; i++)
+    {
+        /* code */
+        dupl /= 10;
+        temp = perem - dupl *10;
+        perem = dupl;
+        cout << temp << " ";
+        zapomnim += temp * (i * 10);
+    }
     
     return 0;
 }
