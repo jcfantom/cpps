@@ -3,19 +3,22 @@ using namespace std;
 
 int main()
 {
-    int vvod, count;
+    int vvod, count, n;
     cin >> vvod;
     count = 0;
-
-    while (count <= vvod)
+    n = 1;
+    while (count < vvod)
     {
         /* code */
-        if (count % 2 == 0)
+        if (n % 2 == 0)
         {
             /* code */
-            cout << count << " ";
+            cout << n << " ";
+            count++;
         }
-        count++;
+        
+        n++;
+        
         
     }
     
