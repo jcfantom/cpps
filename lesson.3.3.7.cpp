@@ -4,15 +4,18 @@ using namespace std;
 int main()
 {
     int vvod, count;
-    count = 0;
-    for (int i = 0; i <= vvod; i++)
+    cin >> vvod;
+    count = 1;
+    while (vvod != 0)
     {
         /* code */
-        if (i % 2 == 0)
+        if (count % 2 == 0)
         {
             /* code */
-            
+            cout << count << " ";
+            vvod--;
         }
+        count++;
         
     }
     
