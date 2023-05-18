@@ -5,7 +5,9 @@ using namespace std;
 int sro(int Ich, int IIch, int IIIch, int IVch)
 {
     float sum;
-    sum = (Ich + IIch + IIIch + IVch) / 4;
+    sum = Ich + IIch + IIIch + IVch;
+    sum *= 1.0;
+    sum /= 4;
 
     return round(sum);
 }
