@@ -3,14 +3,17 @@ using namespace std;
 
 int main()
 {
+    setlocale(LC_ALL, "Russian");
     int Sum;
     int tmpSum;
-    bool isChet, isEST;
+    bool isChet;
     isChet = false;
-    isEST = false;
     int a, b, n;
     int i;
-    cin >> a >> b;
+    cout << "Введите нижний предел: ";
+    cin >> a;
+    cout << "Введите верхний предел: ";
+    cin >> b;
     for (n = a; n <= b; n++)
     {
         Sum = 0;
@@ -37,24 +40,23 @@ int main()
             continue;
         }
 
-        if (n == tmpSum && isChet == false && Sum <= b)
+        if (n == tmpSum && isChet == false)
         {
             if (n != Sum)
             {
                 /* code */
-                cout << "(" << n << "," << Sum << ") ";
+                cout << "(" << n << ", " << Sum << ") ";
                 isChet = true;
-                isEST = true;
             }
         }
         
     }
-    if (isEST == false)
+    if (Sum > 0 && n > 0 && tmpSum > 0 && n != tmpSum) 
     {
         /* code */
         cout << 0 << endl;
-
     }
     
+
     return 0;
 }
