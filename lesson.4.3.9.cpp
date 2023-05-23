@@ -3,10 +3,11 @@ using namespace std;
 
 bool isSimple(int x)
 {
+    
     if (x < 2 || x == 4)
     {
         /* code */
-        return false;
+        return  false;
     }
 
     for (int i = 2; i < x / 2; i++)
@@ -26,22 +27,32 @@ bool isSimple(int x)
 
 bool drobim_chislo(int x)
 {
-    int chislo, ost;
+    int chislo;
     bool flag;
     flag = true;
-
-    while (x != 0 && flag)
+    if (isSimple(x))
     {
-        /* code */
-        chislo = x / 10;    
-        ost = x % 10;
-        if (isSimple(ost) && isSimple(x))
-            flag = true;
-        else
-            flag = false;
-        x /= 10;
-        
+        /* code */    
+        while (x != 0 && flag)
+        {
+            /* code */
+            if (x > 9)
+            {
+                chislo = x / 10;
+            }
+            else
+                chislo = x;
+
+            if (isSimple(chislo))
+                flag = true;
+            else
+                flag = false;
+                x /= 10;
+        }
     }
+    else
+        flag = false;
+
     return flag;
 }
 int main()
