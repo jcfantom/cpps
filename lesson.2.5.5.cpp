@@ -14,5 +14,12 @@ int main()
         tmp /= 10;
         len_vvod++;
     }
+    tmp = vvod;
+
+    while (len_vvod != 0)
+    {
+        /* code */
+        
+    }
     
 }
